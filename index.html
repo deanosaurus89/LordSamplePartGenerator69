@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101418">
+  <meta name="description" content="Generator für kreative Bauteilnamen in Messtechnik und Maschinenbau. Deutsch und Englisch, drei Humorstufen, nach Bereich filterbar.">
+  <title>Lord Sample — Bauteilnamen</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#name" data-i18n="skip">Zum Namen</a>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="48" height="48">
+            <rect x="1" y="1" width="46" height="46" rx="12" fill="#2b2218"/>
+            <circle cx="24" cy="24" r="13" fill="none" stroke="#ffc857" stroke-width="2"/>
+            <path d="M24 24 L33 16" stroke="#ffc857" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="2.4" fill="#ffc857"/>
+            <path d="M24 11 V13 M24 35 V37 M11 24 H13 M35 24 H37" stroke="#e4cfa4" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <p class="kicker" data-i18n="kicker">Bauteilnamen für Demos</p>
+          <h1 data-i18n="title">Lord Sample</h1>
+          <p class="tagline" data-i18n="tagline">Damit die Demo nicht schon wieder „Welle 1“ heißt.</p>
+        </div>
+      </div>
+      <fieldset class="lang">
+        <legend class="sr-only" data-i18n="langAria">Sprache</legend>
+        <label>
+          <input type="radio" name="lang" value="de" checked>
+          <span>DE</span>
+        </label>
+        <label>
+          <input type="radio" name="lang" value="en">
+          <span>EN</span>
+        </label>
+      </fieldset>
+    </header>
+
+    <main class="layout">
+      <section class="plate-card">
+        <article class="plate">
+          <span class="screw s1" aria-hidden="true"></span>
+          <span class="screw s2" aria-hidden="true"></span>
+          <div class="plate-inner">
+            <div class="plate-top">
+              <p class="pn"><span data-i18n="pnLabel">Zeichnung</span> <strong id="pn">LS-69-···</strong></p>
+              <p class="badge" id="badge" data-tone="wry">Leicht schief</p>
+            </div>
+            <h2 id="name" class="plate-name" lang="de">Übermotivierte Montagswelle</h2>
+            <p class="plate-meta" id="meta"></p>
+            <div class="plate-actions">
+              <button type="button" id="again" data-i18n="again">Nochmal</button>
+              <button type="button" id="copy" data-i18n="copy">Kopieren</button>
+            </div>
+          </div>
+        </article>
+        <p id="live" class="sr-only" aria-live="polite"></p>
+      </section>
+
+      <form class="controls" id="console" autocomplete="off">
+        <fieldset>
+          <legend><span class="idx">01</span> <span data-i18n="wordsLabel">Wörter</span></legend>
+          <div class="segment">
+            <label><input type="radio" name="words" value="1"><span>1</span></label>
+            <label><input type="radio" name="words" value="2"><span>2</span></label>
+            <label><input type="radio" name="words" value="3" checked><span>3</span></label>
+            <label><input type="radio" name="words" value="4"><span>4</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="idx">02</span> <span data-i18n="humorLabel">Humor</span></legend>
+          <div class="humor">
+            <label class="choice">
+              <input type="radio" name="humor" value="serious">
+              <span class="choice-body">
+                <span class="choice-title" data-i18n="humorSerious">Seriös</span>
+                <span class="choice-help" data-i18n="humorSeriousHelp">Zeichnungstauglich, wie aus der Fertigung.</span>
+                <span class="choice-ex" data-i18n="exSerious">Gehärtete Messwelle</span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="humor" value="wry" checked>
+              <span class="choice-body">
+                <span class="choice-title" data-i18n="humorWry">Ein bisschen witzig</span>
+                <span class="choice-help" data-i18n="humorWryHelp">Schmunzeln in der Besprechung, trotzdem ein Bauteil.</span>
+                <span class="choice-ex" data-i18n="exWry">Übermotivierte Montagswelle</span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="humor" value="unhinged">
+              <span class="choice-body">
+                <span class="choice-title" data-i18n="humorUnhinged">Unvernünftig witzig</span>
+                <span class="choice-help" data-i18n="humorUnhingedHelp">Dunkel und grenzwertig, aber noch als Teil benennbar.</span>
+                <span class="choice-ex" data-i18n="exUnhinged">Seelenlose Verdammniswelle</span>
+              </span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="idx">03</span> <span data-i18n="domainsLabel">Bereiche</span></legend>
+          <div class="chips" id="chips">
+            <label class="chip"><input type="checkbox" name="domain" value="shafts"><span data-i18n="domShafts">Wellen &amp; Achsen</span></label>
+            <label class="chip"><input type="checkbox" name="domain" value="flanges"><span data-i18n="domFlanges">Flansche &amp; Adapter</span></label>
+            <label class="chip"><input type="checkbox" name="domain" value="housings"><span data-i18n="domHousings">Gehäuse &amp; Platten</span></label>
+            <label class="chip"><input type="checkbox" name="domain" value="sensors"><span data-i18n="domSensors">Sensorik &amp; Messtechnik</span></label>
+            <label class="chip"><input type="checkbox" name="domain" value="fixtures"><span data-i18n="domFixtures">Spannmittel &amp; Fixtures</span></label>
+            <label class="chip"><input type="checkbox" name="domain" value="drives"><span data-i18n="domDrives">Getriebe &amp; Antrieb</span></label>
+            <label class="chip"><input type="checkbox" name="domain" value="fluid"><span data-i18n="domFluid">Hydraulik/Pneumatik</span></label>
+            <label class="chip"><input type="checkbox" name="domain" value="electronics"><span data-i18n="domElectronics">Elektronik-Gehäuse</span></label>
+          </div>
+          <div class="hint-row">
+            <p class="hint" id="domainHint"></p>
+            <button type="button" id="mix" data-i18n="mix">Alle mischen</button>
+          </div>
+        </fieldset>
+
+        <div class="generate-bar">
+          <button type="submit" class="generate" id="generate" data-i18n="generate">Generieren</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p data-i18n="footer">Läuft komplett im Browser. Es wird nichts hochgeladen. Die Einstellungen bleiben nur auf diesem Gerät.</p>
+    </footer>
+  </div>
+  <noscript>
+    <p class="noscript">JavaScript wird zum Generieren gebraucht. / JavaScript is required to generate names.</p>
+  </noscript>
+  <script src="data.js"></script>
+  <script src="i18n.js"></script>
+  <script src="generator.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
